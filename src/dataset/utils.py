@@ -1,6 +1,5 @@
 import torch
 
-
 def mimic4_collate_fn(data):
     data = {k: [d[k] for d in data] for k in data[0]}
 
