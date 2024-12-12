@@ -4,8 +4,8 @@ from typing import List
 import numpy as np
 import torch
 
-from src.dataset.vocab import Vocabulary
-from src.utils import processed_data_path, load_pickle
+from dataset.vocab import Vocabulary
+from utils import processed_data_path, load_pickle
 
 
 def to_index(sequence: List[str], vocab, prefix="", suffix=""):

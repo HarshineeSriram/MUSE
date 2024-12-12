@@ -1,8 +1,13 @@
 import torch
 import torch.nn as nn
 
-from src.encoder.ffn_encoder import FFNEncoder
-from gnn import MML
+import os
+
+# Change working directory to one folder up
+os.chdir("..")
+
+from encoder.ffn_encoder import FFNEncoder
+from core.gnn import MML
 
 
 class ADNIBackbone(nn.Module):

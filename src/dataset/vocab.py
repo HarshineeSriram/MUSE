@@ -1,4 +1,4 @@
-from src.utils import dump_pickle
+from utils import dump_pickle
 
 
 class Vocabulary(object):

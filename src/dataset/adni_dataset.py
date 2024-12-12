@@ -3,7 +3,7 @@ import os
 import torch
 from torch.utils.data import Dataset
 
-from src.utils import processed_data_path, read_txt, load_pickle
+from utils import processed_data_path, read_txt, load_pickle
 
 
 class ADNIDataset(Dataset):
@@ -17,7 +17,7 @@ class ADNIDataset(Dataset):
         self.task = task
         self.all_hosp_adm_dict = load_pickle(os.path.join(processed_data_path, "adni/adni_data_dict.pkl"))
         included_admission_ids = read_txt(
-            os.path.join(processed_data_path, f"adni/task:{task}/{split}_admission_ids.txt"))
+            os.path.join(processed_data_path, f"adni/task_{task}/{split}_admission_ids.txt"))
         self.no_label_admission_ids = []
         if load_no_label:
             no_label_admission_ids = read_txt(

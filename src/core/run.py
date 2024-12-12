@@ -6,13 +6,13 @@ import logging
 
 from torch.utils.data import DataLoader
 
-from model import MMLBackbone
-from src.dataset.adni_dataset import ADNIDataset
-from src.dataset.eicu_dataset import eICUDataset
-from src.dataset.mimic4_dataset import MIMIC4Dataset
-from src.dataset.utils import mimic4_collate_fn, eicu_collate_fn
-from src.helper import Helper
-from src.utils import count_parameters
+from core.model import MMLBackbone
+from dataset.adni_dataset import ADNIDataset
+from dataset.eicu_dataset import eICUDataset
+from dataset.mimic4_dataset import MIMIC4Dataset
+from dataset.utils import mimic4_collate_fn, eicu_collate_fn
+from helper import Helper
+from utils import count_parameters
 
 
 def parse_arguments(parser):
@@ -47,7 +47,7 @@ def parse_arguments(parser):
     parser.add_argument("--no_train", type=bool, default=False)
     parser.add_argument("--note", type=str, default="mml_v19")
     parser.add_argument("--exp_name_attr", type=list, default=["dataset", "task", "note"])
-    parser.add_argument("--official_run", action="store_true", default=True)
+    parser.add_argument("--official_run", action="store_true", default=False)
     parser.add_argument("--no_cuda", type=bool, default=False)
     args = parser.parse_args()
     return args

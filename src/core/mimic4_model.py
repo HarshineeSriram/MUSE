@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 
-from src.encoder.code_encoder import CodeEncoder
-from src.encoder.rnn_encoder import RNNEncoder
-from src.encoder.text_encoder import TextEncoder
-from gnn import MML
+from encoder.code_encoder import CodeEncoder
+from encoder.rnn_encoder import RNNEncoder
+from encoder.text_encoder import TextEncoder
+from core.gnn import MML
 
 
 class MIMIC4Backbone(nn.Module):

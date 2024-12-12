@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 
-from src.encoder.code_encoder import CodeEncoder
-from src.encoder.ffn_encoder import FFNEncoder
-from src.encoder.rnn_encoder import RNNEncoder
-from gnn import MML
+from encoder.code_encoder import CodeEncoder
+from encoder.ffn_encoder import FFNEncoder
+from encoder.rnn_encoder import RNNEncoder
+from core.gnn import MML
 
 
 class eICUBackbone(nn.Module):

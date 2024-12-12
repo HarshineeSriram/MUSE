@@ -3,8 +3,8 @@ import os
 import torch
 from torch.utils.data import Dataset
 
-from src.dataset.tokenizer import MIMIC4Tokenizer
-from src.utils import processed_data_path, read_txt, load_pickle
+from dataset.tokenizer import MIMIC4Tokenizer
+from utils import processed_data_path, read_txt, load_pickle
 
 
 class MIMIC4Dataset(Dataset):

@@ -3,10 +3,10 @@ import torch
 import torch.nn as nn
 from tqdm import tqdm
 
-from adni_model import ADNIBackbone
-from eicu_model import eICUBackbone
-from mimic4_model import MIMIC4Backbone
-from src.metrics import get_metrics_binary, get_metrics_multiclass
+from core.adni_model import ADNIBackbone
+from core.eicu_model import eICUBackbone
+from core.mimic4_model import MIMIC4Backbone
+from metrics import get_metrics_binary, get_metrics_multiclass
 
 
 class MMLBackbone(nn.Module):

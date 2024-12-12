@@ -6,7 +6,7 @@ from torch.utils.data import Dataset
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer
 
-from src.utils import set_seed, processed_data_path, load_pickle
+from utils import set_seed, processed_data_path, load_pickle
 
 # set random seed
 set_seed(42)

@@ -3,8 +3,8 @@ import os
 import torch
 from torch.utils.data import Dataset
 
-from src.dataset.tokenizer import eICUTokenizer
-from src.utils import processed_data_path, read_txt, load_pickle
+from dataset.tokenizer import eICUTokenizer
+from utils import processed_data_path, read_txt, load_pickle
 
 
 class eICUDataset(Dataset):

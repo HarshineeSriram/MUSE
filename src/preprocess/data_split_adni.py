@@ -1,7 +1,7 @@
 import os
 import random
 
-from src.utils import processed_data_path, load_pickle, set_seed, create_directory, write_txt
+from utils import processed_data_path, load_pickle, set_seed, create_directory, write_txt
 
 
 def label_split(all_hosp_adm_dict, task):
@@ -36,7 +36,7 @@ def main():
         label_hosp_adm_dict, no_label_hosp_adm_dict = label_split(all_hosp_adm_dict, task)
         train_admission_ids, val_admission_ids, test_admission_ids = tvt_split(label_hosp_adm_dict)
         no_label_admission_ids = list(no_label_hosp_adm_dict.keys())
-        output_path = os.path.join(processed_data_path, f"adni/task:{task}")
+        output_path = os.path.join(processed_data_path, f"adni/task_{task}")
         create_directory(output_path)
         write_txt(os.path.join(output_path, "train_admission_ids.txt"), train_admission_ids)
         write_txt(os.path.join(output_path, "val_admission_ids.txt"), val_admission_ids)

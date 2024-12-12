@@ -10,8 +10,8 @@ import neptune
 import numpy as np
 import torch
 
-import src.credentials as credentials
-from src.utils import project_path, remote_project_path, create_directory, set_seed
+#import credentials as credentials
+from utils import project_path, remote_project_path, create_directory, set_seed
 
 
 class Helper:
